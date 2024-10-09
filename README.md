@@ -98,7 +98,7 @@ Post Exploitation The target is now owned. Following are meterpreter commands fo
 ![image](https://github.com/user-attachments/assets/8c395ebf-ff86-4fe0-98ae-9aa86832f14a)
 
 
-![image](https://github.com/user-attachments/assets/cd1f040f-2f9b-4180-8f52-b78f1b7d1ca2)
+![image](https://github.com/user-attachments/assets/6da0cb33-d3f9-4062-8830-bb8c51d4bc5d)
 
 keyscan_dump Shows the keystrokes captured so far
 
